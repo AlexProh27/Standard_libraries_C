@@ -39,7 +39,7 @@ gcov_report: clean lib_cov.a
 	rm -f test.c
 
 test: clean $(TESTS_SOURSES) s21_decimal.a
-	$(CC) -o test test_s21_decimal.c s21_decimal.a -lcheck
+	$(CC) -o test test_s21_decimal.c s21_decimal.a -lcheck -lsubunit -lpthread -lrt -lm
 	./test
 
 clean:
